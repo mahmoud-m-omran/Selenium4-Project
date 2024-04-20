@@ -25,4 +25,4 @@ jobs:
           run: mvn clean compile
 
         - name: Run tests with Selenium
-          run: mvn test
+          run: mvn test -DargLine="-Dtestng.file=testng.xml"
