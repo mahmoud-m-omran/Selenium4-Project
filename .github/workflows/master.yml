@@ -1,0 +1,15 @@
+on:
+  push:
+    branches:
+      - master
+
+
+steps:
+  - name: Set up JDK
+    uses: actions/setup-java@v2
+    with:
+      java-version: `21`
+
+  - name: Build and test
+    run: mvn test
+
