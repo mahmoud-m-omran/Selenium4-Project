@@ -3,13 +3,16 @@ on:
     branches:
       - master
 
+jobs:
+  build_and_test:
+    name: Build and Test
+    runs-on: ubuntu-latest
 
-steps:
-  - name: Set up JDK
-    uses: actions/setup-java@v2
-    with:
-      java-version: `21`
+    steps:
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: `21`
 
-  - name: Build and test
-    run: mvn test
-
+      - name: Build and test
+        run: mvn test
