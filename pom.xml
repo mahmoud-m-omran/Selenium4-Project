@@ -80,8 +80,21 @@
 <!--          <encodeing>${maven-compiler-plugin-encoding}</encodeing>-->
           <release>${java-release.version}</release>
         </configuration>
-
       </plugin>
+
+      <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.5</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+
+
     </plugins>
   </build>
 </project>
