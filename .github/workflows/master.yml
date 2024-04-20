@@ -21,6 +21,12 @@ jobs:
             java-version: '17'
             distribution: 'adopt'
 
+        - name: Install Chrome
+          uses: browser-actions/setup-chrome@latest
+
+        - name: Install Firefox
+          uses: browser-actions/setup-firefox@latest
+
         - name: Build with Maven
           run: mvn clean compile
 
