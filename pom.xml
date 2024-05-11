@@ -13,10 +13,13 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <selenium-java.versoion>4.19.1</selenium-java.versoion>
-    <testng.version>7.10.1</testng.version>
+    <testng.version>7.10.2</testng.version>
     <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
     <maven-compiler-plugin-encoding>UTF-8</maven-compiler-plugin-encoding>
     <java-release.version>17</java-release.version>
+    <log4jcore.version>2.23.1</log4jcore.version>
+    <log4japi.version>2.23.1</log4japi.version>
+    <webdrivermanager.version>5.7.0</webdrivermanager.version>
   </properties>
 
   <dependencies>
@@ -65,7 +68,34 @@
       <artifactId>allure-testng</artifactId>
       <version>2.27.0</version>
     </dependency>
-
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>2.23.1</version>
+    </dependency>
+  <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+  <dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>${log4jcore.version}</version>
+  </dependency>
+  <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+  <dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-api</artifactId>
+    <version>${log4japi.version}</version>
+  </dependency>
+    <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>${webdrivermanager.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>com.google.guava</groupId>
+          <artifactId>guava</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
 
   </dependencies>
   <build>

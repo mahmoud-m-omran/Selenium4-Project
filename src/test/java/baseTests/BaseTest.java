@@ -64,8 +64,9 @@ public class BaseTest {
 
     @DataProvider(name = "loginRestData")
     public Object[][] getLoginTestData() {
+        int numberOfColumnsInTheCsvFile = 3;
         List<UserData> usersData = CsvFileReader.getUserData();
-        Object[][] testData = new Object[usersData.size()][3];
+        Object[][] testData = new Object[usersData.size()][numberOfColumnsInTheCsvFile];
 
         for (int i = 0; i < usersData.size(); i++) {
             UserData userData = usersData.get(i);

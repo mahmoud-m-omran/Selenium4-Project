@@ -30,7 +30,7 @@ private By headerWelcomeMessageSelector= By.cssSelector(".content p");
              wait.until(ExpectedConditions.presenceOfElementLocated(headerWelcomeMessageSelector));
             element= driver.findElement(headerWelcomeMessageSelector);
             i++;
-        }while(element==null&&i<=10);
+        }while(i<=5);
         if (element == null){
             System.out.println("There is a problem with login due to long loading after clicking on the login button and before redirection to the admin page");
         }
