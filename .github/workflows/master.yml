@@ -33,6 +33,15 @@ jobs:
         - name: Run tests with Selenium
           run: mvn test -DargLine="-Dtestng.file=testng.xml"
   reports:
-    extent:
-      enabled: true
-      reportPath: test-automation-demo/extent-report-results/report.html
+    needs: build_and_test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Upload Extent Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: extent-report
+          path: test-automation-demo/extent-report-results/report.html
