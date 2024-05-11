@@ -13,13 +13,14 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <selenium-java.versoion>4.19.1</selenium-java.versoion>
-    <testng.version>7.10.2</testng.version>
+    <testng.version>7.10.1</testng.version>
     <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
     <maven-compiler-plugin-encoding>UTF-8</maven-compiler-plugin-encoding>
     <java-release.version>17</java-release.version>
     <log4jcore.version>2.23.1</log4jcore.version>
     <log4japi.version>2.23.1</log4japi.version>
     <webdrivermanager.version>5.7.0</webdrivermanager.version>
+    <extentreports.version>4.1.5</extentreports.version>
   </properties>
 
   <dependencies>
@@ -95,6 +96,12 @@
           <artifactId>guava</artifactId>
         </exclusion>
       </exclusions>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+    <dependency>
+      <groupId>com.aventstack</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>${extentreports.version}</version>
     </dependency>
 
   </dependencies>
